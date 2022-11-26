@@ -1,0 +1,29 @@
+$clr-deep-skyblue: #0160d6;
+// $clr-skyblue: #00aaf8;
+$clr-skyblue: #b9ebff;
+$clr-orange: #f13b13;
+$clr-yellow: #aab624;
+$clr-white: #fff;
+$clr-gradient: linear-gradient(90deg, #0073ff, #0160d6, #0051b5);
+
+$ff-Nunito-Sans: "Nunito Sans", sans-serif;
+$ff-Ubuntu: "Ubuntu", sans-serif;
+
+$ff-body: ($ff-Nunito-Sans);
+$ff-nav: ($ff-Nunito-Sans);
+$ff-button: ($ff-Nunito-Sans);
+$ff-home-heading: ($ff-Ubuntu);
+$ff-primary-heading: ($ff-Ubuntu);
+$ff-secondary-heading: ($ff-Nunito-Sans);
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+$fs-body: clamp(1.1rem, calc(0.8rem + 1.5vw), 1.2rem);
+$fs-nav: clamp(1.1rem, calc(0.8rem + 1.5vw), 1.2rem);
+$fs-button: clamp(1.1rem, calc(0.8rem + 1.5vw), 1.2rem);
+$fs-home-heading: clamp(2rem, calc(1.5rem + 4vw), 3.5rem);
+$fs-primary-heading: clamp(1.5rem, calc(1.2rem + 2vw), 2rem);
+$fs-secondary-heading: clamp(1.2rem, calc(1rem + 1.5vw), 1.5rem);

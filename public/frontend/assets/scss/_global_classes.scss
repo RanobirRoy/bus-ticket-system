@@ -1,0 +1,98 @@
+.text-deep-skyblue {
+  color: $clr-deep-skyblue;
+}
+.text-skyblue {
+  color: $clr-skyblue;
+}
+.text-orange {
+  color: $clr-orange;
+}
+.text-yellow {
+  color: $clr-yellow;
+}
+.text-white {
+  color: $clr-white;
+}
+.bg-deep-skyblue {
+  background-color: $clr-deep-skyblue;
+}
+.bg-skyblue {
+  background-color: $clr-skyblue;
+}
+.bg-orange {
+  background-color: $clr-orange;
+}
+.bg-yellow {
+  background-color: $clr-yellow;
+}
+.bg-white {
+  background-color: $clr-white;
+}
+.fs-body {
+  font-size: $fs-body;
+  font-family: $ff-body;
+}
+.fs-nav {
+  font-size: $fs-nav;
+  font-family: $ff-nav;
+}
+.fs-button {
+  font-size: $fs-button;
+  font-family: $ff-button;
+}
+.fs-home-heading {
+  font-size: $fs-home-heading;
+  font-family: $ff-home-heading;
+}
+.fs-primary-heading {
+  font-size: $fs-primary-heading;
+  font-family: $ff-primary-heading;
+}
+.fs-secondary-heading {
+  font-size: $fs-secondary-heading;
+  font-family: $ff-secondary-heading;
+}
+.fw-regular {
+  font-weight: $fw-regular;
+}
+.fw-medium {
+  font-weight: $fw-medium;
+}
+.fw-semi-bold {
+  font-weight: $fw-semi-bold;
+}
+.fw-bold {
+  font-weight: $fw-bold;
+}
+// =============Classes for styling==============
+
+.container {
+  --max-width: 1110px;
+  --min-width: 100% - 1rem;
+  width: min(var(--max-width), var(--min-width));
+  margin-inline: auto;
+}
+.inner-container {
+  padding-inline: 1rem;
+}
+.section-padding-block {
+  padding-block: 4rem;
+}
+.section-padding-top {
+  padding-block-start: 2rem;
+}
+.btn {
+  @include button-style;
+}
+.btn:hover {
+  @include button-style-hover;
+}
+.btn[data-type="reverse"] {
+  @include button-style2;
+}
+.btn[data-type="reverse"]:hover {
+  @include button-style-hover2;
+}
+.section-heading {
+  text-align: center;
+}

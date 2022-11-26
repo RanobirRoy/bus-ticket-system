@@ -1,0 +1,270 @@
+@import "boilerplate";
+@import "font";
+@import "mixin";
+@import "variable";
+@import "global_classes";
+@import "component_code";
+
+// ===========Payment suport content=============
+
+.brand-logo {
+  font-size: $fs-primary-heading;
+  color: $clr-white;
+  font-family: $ff-Ubuntu;
+  font-weight: $fw-bold;
+}
+.brand-logo[data-type="reverse"] {
+  color: $clr-deep-skyblue;
+}
+.homepage {
+  background-image: url("../images/home-bg.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.primary-header {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 170, 248, 0.8);
+  .nav-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .primary-navigation {
+      ul {
+        display: flex;
+        @include gap;
+        li {
+          a {
+            color: $clr-white;
+            font-size: $fs-nav;
+            font-family: $ff-nav;
+          }
+        }
+      }
+    }
+    .option {
+      display: flex;
+      @include gap;
+      .sign-up-option {
+        display: flex;
+        @include gap;
+      }
+      .toggle-btn {
+        display: none;
+        aspect-ratio: 1;
+        width: 2.5rem;
+        place-items: center;
+        font-size: 2rem;
+        color: $clr-white;
+      }
+      .toggle-btn .toggle-icon[name="close"] {
+        display: none;
+      }
+    }
+  }
+}
+.home-content {
+  .home-content-wraper {
+    display: flex;
+    height: 85vh;
+    .home-left {
+      flex: 3;
+      height: 100%;
+      box-shadow: 0 0 0 100vmax rgba(0, 170, 248, 0.8);
+      clip-path: inset(0 0 0 -100vmax);
+      .home-left-wraper {
+        display: flex;
+        flex-direction: column;
+        @include gap;
+        background-color: rgba(0, 170, 248, 0.8);
+        clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+        height: 100%;
+        justify-content: center;
+      }
+    }
+    .home-right {
+      flex: 2;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      button {
+        margin-bottom: 2rem;
+        width: min(321px, 100%);
+      }
+    }
+  }
+}
+
+@media (max-width: 936px) {
+  .homepage {
+    .primary-header {
+      .nav-wraper {
+        .primary-navigation {
+          ul {
+            display: none;
+          }
+        }
+        .option {
+          .toggle-btn {
+            display: grid;
+          }
+          .toggle-btn .toggle-icon[name="close"] {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 885px) {
+  .home-content {
+    .home-content-wraper {
+      flex-direction: column;
+      .home-left {
+        flex: 1;
+        clip-path: inset(0 -100vmax);
+        .home-left-wraper {
+          text-align: center;
+          clip-path: none;
+          .destination-info {
+            margin-inline: auto;
+          }
+        }
+      }
+      .home-right {
+        background-color: rgba(0, 170, 248, 0.8);
+        box-shadow: 0 0 0 100vmax rgba(0, 170, 248, 0.8);
+        clip-path: inset(0 -100vmax);
+        flex: 1;
+        align-items: center;
+        button {
+          margin-bottom: 0rem;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .homepage {
+    .primary-header {
+      .nav-wraper {
+        .option {
+          .sign-up-option {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ===========Payment suport content=============
+.step-bar {
+  .step-bar-wraper {
+    ul {
+      display: flex;
+      justify-content: center;
+      li {
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        position: relative;
+        &[data-type="complete"]::after {
+          background: $clr-deep-skyblue;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          height: 5px;
+          width: 100%;
+          left: 0;
+          top: 50%;
+          background: $clr-orange;
+          z-index: -1;
+        }
+        &:first-child::after {
+          width: 50%;
+          left: 50%;
+        }
+        &:last-child::after {
+          width: 50%;
+          left: 0;
+        }
+        .step-icon {
+          color: $clr-white;
+          padding: 0.5rem;
+          height: 2.5rem;
+          width: 2.5rem;
+          background: $clr-orange;
+          border-radius: 50%;
+        }
+        .step-icon[data-type="complete"] {
+          background: $clr-deep-skyblue;
+        }
+      }
+    }
+  }
+}
+// ===========Step 2 Code=============
+.step-2 {
+  .step-2-wraper {
+    width: max-content;
+    margin-inline: auto;
+    table {
+      thead tr {
+        background: $clr-skyblue;
+        th {
+          padding: 0.2rem 1rem;
+          font-family: $ff-Nunito-Sans;
+        }
+      }
+      tbody tr {
+        background: #eee;
+        td {
+          text-align: center;
+          padding: 0.2rem 1rem;
+          font-family: $ff-Nunito-Sans;
+          .td-icon {
+            color: $clr-orange;
+          }
+        }
+      }
+    }
+  }
+}
+// ===========Payment suport content=============
+.payment-suport-content {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  @include gap;
+  place-items: center;
+}
+// ===========Step 1 code=============
+.step-1-wraper {
+  background: $clr-skyblue;
+  padding: 2rem;
+  width: min(40rem, 100% - 1rem);
+  margin-inline: auto;
+}
+.step-1-wraper > * {
+  width: 100%;
+}
+// ===========Footer Code=============
+
+.footer-wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 425px) {
+  .footer-wraper {
+    flex-direction: column-reverse;
+  }
+}

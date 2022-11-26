@@ -1,0 +1,29 @@
+@mixin gap {
+  gap: clamp(0.5rem, calc(0.5rem + 2vw), 1.5rem);
+}
+@mixin button-style {
+  padding: clamp(0.3rem, calc(0.2rem + 0.5vw), 0.35rem) clamp(1rem, calc(0.5rem + 1.5vw), 1.5rem);
+  outline: none;
+  border: 1px solid transparent;
+  background: $clr-gradient;
+  font-size: $fs-button;
+  font-family: $ff-button;
+  color: $clr-white;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 200ms ease;
+  user-select: none;
+}
+@mixin button-style2 {
+  font-weight: $fw-bold;
+  transition: none;
+}
+@mixin button-style-hover {
+  background: transparent;
+  border: 1px solid $clr-white;
+}
+@mixin button-style-hover2 {
+  background: $clr-white;
+  border: 1px solid transparent;
+  color: $clr-deep-skyblue;
+}
